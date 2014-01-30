@@ -1,12 +1,21 @@
 #Thanks to Fletcher Nichol - https://github.com/fnichol
 
 Veewee::Definition.declare({
+<<<<<<< HEAD
   :cpu_count => '2',
   :memory_size=> '1024',
   :disk_size => '10140', :disk_format => 'VDI', :hostiocache => 'off',
   :os_type_id => 'Debian_64',
   :iso_file => "debian-7.3.0-amd64-netinst.iso",
   :iso_src => "http://gensho.acc.umu.se/debian-cd/7.3.0/amd64/iso-cd/debian-7.3.0-amd64-netinst.iso",
+=======
+  :cpu_count => '1',
+  :memory_size=> '256',
+  :disk_size => '10140', :disk_format => 'VDI', :hostiocache => 'off',
+  :os_type_id => 'Debian_64',
+  :iso_file => "debian-7.3.0-amd64-netinst.iso",
+  :iso_src => "http://cdimage.debian.org/debian-cd/7.3.0/amd64/iso-cd/debian-7.3.0-amd64-netinst.iso",
+>>>>>>> 63adfa350f8aac602d5996f453c0e8868472f34c
   :iso_md5 => "72473e8a5e65b61acc7efde90d9f71d1",
   :iso_download_timeout => "1000",
   :boot_wait => "10", :boot_cmd_sequence => [
@@ -43,7 +52,11 @@ Veewee::Definition.declare({
     "virtualbox.sh",
     #"vmfusion.sh",
     "ruby.sh",
+<<<<<<< HEAD
     #"puppet.sh",
+=======
+    "puppet.sh",
+>>>>>>> 63adfa350f8aac602d5996f453c0e8868472f34c
     "chef.sh",
     "cleanup-virtualbox.sh",
     "cleanup.sh",

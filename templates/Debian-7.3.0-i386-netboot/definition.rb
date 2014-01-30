@@ -1,10 +1,19 @@
 Veewee::Definition.declare({
+<<<<<<< HEAD
   :cpu_count => '2',
   :memory_size=> '1024',
   :disk_size => '10140', :disk_format => 'VDI', :hostiocache => 'off',
   :os_type_id => 'Debian',
   :iso_file => "debian-7.3.0-i386-netinst.iso",
   :iso_src => "http://ftp.acc.umu.se/debian-cd/7.3.0/i386/iso-cd/debian-7.3.0-i386-netinst.iso",
+=======
+  :cpu_count => '1',
+  :memory_size=> '256',
+  :disk_size => '10140', :disk_format => 'VDI', :hostiocache => 'off',
+  :os_type_id => 'Debian',
+  :iso_file => "debian-7.3.0-i386-netinst.iso",
+  :iso_src => "http://cdimage.debian.org/debian-cd/7.3.0/i386/iso-cd/debian-7.3.0-i386-netinst.iso",
+>>>>>>> 63adfa350f8aac602d5996f453c0e8868472f34c
   :iso_md5 => "04c58f30744e64a0459caf7d7cace479",
   :iso_download_timeout => "1000",
   :boot_wait => "10", :boot_cmd_sequence => [
@@ -41,7 +50,11 @@ Veewee::Definition.declare({
     "virtualbox.sh",
     #"vmfusion.sh",
     "ruby.sh",
+<<<<<<< HEAD
     #"puppet.sh",
+=======
+    "puppet.sh",
+>>>>>>> 63adfa350f8aac602d5996f453c0e8868472f34c
     "chef.sh",
     "cleanup-virtualbox.sh",
     "cleanup.sh",
