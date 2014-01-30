@@ -1,11 +1,13 @@
+#Thanks to Fletcher Nichol - https://github.com/fnichol
+
 Veewee::Definition.declare({
   :cpu_count => '2',
   :memory_size=> '1024',
   :disk_size => '10140', :disk_format => 'VDI', :hostiocache => 'off',
-  :os_type_id => 'Debian',
-  :iso_file => "debian-7.3.0-i386-netinst.iso",
-  :iso_src => "http://ftp.acc.umu.se/debian-cd/7.3.0/i386/iso-cd/debian-7.3.0-i386-netinst.iso",
-  :iso_md5 => "04c58f30744e64a0459caf7d7cace479",
+  :os_type_id => 'Debian_64',
+  :iso_file => "debian-testing-amd64-netinst.iso",
+  :iso_src => "http://caesar.acc.umu.se/cdimage/daily-builds/daily/arch-latest/amd64/iso-cd/debian-testing-amd64-netinst.iso",
+  :iso_md5 => "d8d6508c082e6984b6cfc9a5c0741ddb",
   :iso_download_timeout => "1000",
   :boot_wait => "10", :boot_cmd_sequence => [
      '<Esc>',
@@ -33,7 +35,7 @@ Veewee::Definition.declare({
   :ssh_key => "",
   :ssh_host_port => "7222",
   :ssh_guest_port => "22",
-  :sudo_cmd => "echo '%p'|sudo -S sh '%f'",
+  :sudo_cmd => "echo '%p'|sudo -S bash '%f'",
   :shutdown_cmd => "halt -p",
   :postinstall_files => [
     "base.sh",
@@ -41,11 +43,7 @@ Veewee::Definition.declare({
     "virtualbox.sh",
     #"vmfusion.sh",
     "ruby.sh",
-<<<<<<< HEAD
     #"puppet.sh",
-=======
-    "puppet.sh",
->>>>>>> 63adfa350f8aac602d5996f453c0e8868472f34c
     "chef.sh",
     "cleanup-virtualbox.sh",
     "cleanup.sh",
