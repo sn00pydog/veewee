@@ -31,15 +31,15 @@ module Veewee
             pbar = nil
             uri = URI.parse(url)
             uri.open(
-              :content_length_proc => lambda {|t|
-              if t && 0 < t
-                pbar = ProgressBar.new("Fetching file", t)
-                pbar.file_transfer_mode
-              end
-            },
+              :content_length_proc => lambda { |t|
+                if t && 0 < t
+                  pbar = ProgressBar.new("Fetching file", t)
+                  pbar.file_transfer_mode
+                end
+              },
               :progress_proc => lambda {|s|
-              pbar.set s if pbar
-            },
+                pbar.set s if pbar
+              },
               #consider proxy env vars only if host is not excluded
               :proxy => !no_proxy?(uri.host)
             ) { |src|
@@ -58,6 +58,7 @@ module Veewee
 
           #return true if host is excluded from proxy via no_proxy env var, false otherwise
           def no_proxy? host
+            return false if host.nil?
             @no_proxy ||= (ENV['NO_PROXY'] || ENV['no_proxy'] || 'localhost, 127.0.0.1').split(/\s*,\s*/)
             @no_proxy.each do |host_addr|
               return true if host.match(Regexp.quote(host_addr)+'$')

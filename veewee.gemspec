@@ -5,6 +5,7 @@ Gem::Specification.new do |s|
   s.name        = "veewee"
   s.version     = Veewee::VERSION
   s.platform    = Gem::Platform::RUBY
+  s.license     = 'MIT'
   s.authors     = ["Patrick Debois"]
   s.email       = ["patrick.debois@jedi.be"]
   s.homepage    = "http://github.com/jedi4ever/veewee/"
@@ -34,7 +35,8 @@ Gem::Specification.new do |s|
   s.add_dependency "fog", "~> 1.8"
   s.add_dependency "childprocess"
   s.add_dependency "grit"
-  s.add_dependency "fission", "0.4.0"
+  s.add_dependency "fission", "0.5.0"
+  s.add_dependency "to_slug"
   s.add_dependency "os", "~> 0.9.6"
 
   s.required_ruby_version = '>= 1.9.2'

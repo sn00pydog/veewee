@@ -4,13 +4,6 @@ Veewee::Definition.declare({
   :disk_size => '10140', :disk_format => 'VDI', :hostiocache => 'off',
   :os_type_id => 'Debian',
   :iso_file => "debian-7.3.0-i386-netinst.iso",
-<<<<<<< HEAD
-  :iso_src => "http://ftp.acc.umu.se/debian-cd/7.3.0/i386/iso-cd/debian-7.3.0-i386-netinst.iso",
-=======
-  :iso_src => "",
-  :iso_download_instructions => "- You need to download this manually as the ISO is no longer directly downloadable.\n"+
-    "Visit http://cdimage.debian.org/cdimage/archive/7.3.0/i386/ and download it via torrent or jigdo",
->>>>>>> 43c30454bb13059edeaa11bb361075790547bbe3
   :iso_md5 => "04c58f30744e64a0459caf7d7cace479",
   :iso_download_timeout => "1000",
   :boot_wait => "10", :boot_cmd_sequence => [
@@ -53,6 +46,7 @@ Veewee::Definition.declare({
     "puppet.sh",
 >>>>>>> 63adfa350f8aac602d5996f453c0e8868472f34c
     "chef.sh",
+    "systemd.sh",
     "cleanup-virtualbox.sh",
     "cleanup.sh",
     "zerodisk.sh"
