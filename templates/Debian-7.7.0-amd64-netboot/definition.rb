@@ -1,8 +1,8 @@
 #Thanks to Fletcher Nichol - https://github.com/fnichol
 
 Veewee::Definition.declare({
-  :cpu_count => '1',
-  :memory_size=> '256',
+  :cpu_count => '2',
+  :memory_size=> '1024',
   :disk_size => '10140', :disk_format => 'VDI', :hostiocache => 'off',
   :os_type_id => 'Debian_64',
   :iso_file => "debian-7.7.0-amd64-netinst.iso",
@@ -43,7 +43,7 @@ Veewee::Definition.declare({
     "virtualbox.sh",
     #"vmfusion.sh",
     "ruby.sh",
-    "puppet.sh",
+    #"puppet.sh",
     "chef.sh",
     "cleanup.sh",
     "zerodisk.sh"
